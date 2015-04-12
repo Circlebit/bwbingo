@@ -4,13 +4,6 @@ from .forms import BuzzwordForm
 
 bwList = []
 
-
-@app.route('/index')
-def index():
-	return render_template('index.html',
-							title = 'TITEL',
-							subject = 'fnord')
-
 @app.route('/', methods=['GET', 'POST'])
 def newBingo():
 	form = BuzzwordForm() #request.form)
