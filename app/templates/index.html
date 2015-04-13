@@ -4,6 +4,7 @@
 {% block content %}
 	<div>
 		<p>This is an implementation of a Buzzword Bingo Webapp. All written in Python using Flask.</p>
+
 	{% if bwList.__len__() == 0 %}
 		<p>To create a new bingo table, enter a buzzword into the field and press 'Enter'</p>
 		<ol>
@@ -13,10 +14,12 @@
 		<ol>
 
 		{% for buzzword in bwList %}
-			<li>{{ buzzword }} [<a href="{{ bwList.index(buzzword) }}">-</a>]</li>
+			<!-- generating delete links based on the index of the buzzword in bwList. Needs to be changed -->
+			<li>{{ buzzword }} [<a href="{{ bwList.index(buzzword) }}">-</a>]</li> 
 		{% endfor %}
 		
 	{% endif %}
+			<!-- Input StringField -->
 			<li><form action="" method="post" name="BuzzwordForm">
 				{{ form.bwInput(size=40) }}<br>
 			</form></li>
