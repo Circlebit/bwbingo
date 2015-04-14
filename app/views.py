@@ -11,7 +11,6 @@ def newBingo():
 	form = BuzzwordForm()
 	delform = DelButtonForm()
 	
-	#print(delform.delId.data)
 	if request.method == 'POST': # and form.validate(): # add validation!
 		if form.bwInput.data not in bwList and form.bwInput.data != '': # dont accept duplicates or empty string
 			bwList.append(form.bwInput.data)
