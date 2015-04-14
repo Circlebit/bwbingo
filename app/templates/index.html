@@ -15,7 +15,26 @@
 
 		{% for buzzword in bwList %}
 			<!-- generating delete links based on the index of the buzzword in bwList. Needs to be changed -->
-			<li>{{ buzzword }} [<a href="{{ bwList.index(buzzword) }}">-</a>]</li> 
+			<!-- <li>{{ buzzword }} <button id="delbutton_{{ bwList.index(buzzword) }}" class="clickme">-</button> [<a href="{{ bwList.index(buzzword) }}">-</a>]</li>  -->
+			<!-- going with buttons now -->
+			<li>{{ buzzword }}
+			{% for nums in l %}
+				<p>test {{ num }} test</p>
+			{% endfor %}
+			<form action="" method="post" name="DelButtonForm" style="display:inline;">
+				<!-- <button id="delbutton_{{ bwList.index(buzzword) }}" type="submit" value="{{ bwList.index(buzzword) }}" class="clickme">-</button> -->
+				{{ delform.delButton() }}
+
+				{% if not delButtonList %}
+					WHHYYY?
+				{% endif %}
+				
+				{% for delform in delButtonList  %}
+					{{ delform.delButton() }}
+					<p>TEST</p>
+				{% endfor %}
+			</form>
+			</li> 
 		{% endfor %}
 		
 	{% endif %}
