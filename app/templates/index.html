@@ -20,17 +20,7 @@
 			<li>{{ buzzword }}
 
 			<form action="" method="post" name="DelButtonForm" style="display:inline;">
-				<!-- <button id="delbutton_{{ bwList.index(buzzword) }}" type="submit" value="{{ bwList.index(buzzword) }}" class="clickme">-</button> -->
-				{{ delform.delButton() }}
-
-				{% if not delButtonList %}
-					WHY?
-				{% endif %}
-				
-				{% for delform in delButtonList  %}
-					{{ delform.delButton() }}
-					<p>TEST</p>
-				{% endfor %}
+				{{ delButtonList[-1].delButton() }}
 			</form>
 			</li> 
 		{% endfor %}

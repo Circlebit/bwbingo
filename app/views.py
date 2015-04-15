@@ -4,7 +4,6 @@ from .forms import BuzzwordForm, DelButtonForm
 
 bwList = []
 delButtonList = []
-l = [2,3,4]
 
 @app.route('/', methods=['GET', 'POST'])
 def newBingo():
@@ -16,14 +15,8 @@ def newBingo():
 			bwList.append(form.bwInput.data)
 			delform.delId.data = len(bwList)-1
 			delButtonList.append(delform)
-
-		# some prints for debugging
-		print("delButtonList: ")
-		print(delButtonList)
-		for button in delButtonList:
-			print(button.delId.data)
-		
+	
 	return render_template('index.html',
 							form = form,
 							bwList = bwList,
-							delform = delform)
+							delButtonList = delButtonList)
