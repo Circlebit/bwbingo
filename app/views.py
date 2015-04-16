@@ -24,3 +24,8 @@ def newBingo():
 							form = form,
 							bwList = bwList,
 							delButtonList = delButtonList)
+
+
+@app.route('/game', methods=['GET'])
+def game():
+	return "Game is coming soon!"

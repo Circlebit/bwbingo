@@ -10,12 +10,14 @@
 		<ol>
 
 	{% else %}
-		<p>To add another buzzword, enter it into the field and press 'Enter'</p>
+		<p>To add another buzzword, enter it into the field and press 'Enter'.<br>
+		You need <em>at least </em><strong>{{25-bwList.__len__()}}</strong> <em>more!</em></p>
 		<ol>
 
 		{% for buzzword in bwList %}
 			<li>{{ buzzword }}
-			<form action="" method="post" name="DelButtonForm" style="display:inline;"> <!-- delete button -->
+			<!-- delete button -->
+			<form action="" method="post" name="DelButtonForm" style="display:inline;"> 
 				{{ delButtonList[-1].delId( value=bwList.index(buzzword) ) }}
 				{{ delButtonList[-1].delButton() }}
 			</form>
@@ -25,9 +27,11 @@
 	{% endif %}
 			<!-- Input StringField -->
 			<li><form action="" method="post" name="BuzzwordForm">
-				{{ form.bwInput(size=40) }}<br>
+				{{ form.bwInput(size=40, autofocus=true, value="", autocomplete="off") }}<br>
 			</form></li>
 		</ol>
+
+		<a href="/game">Generate Bingo Table!</a>
 
 	</div>
 
