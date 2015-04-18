@@ -37,7 +37,6 @@ def table():
 	shuffle(bwList_shuff)
 
 	bwList_shuff.insert(12, "FREE")
-	print(bwList_shuff)
 
 	return render_template('table.html',
 							bwList_shuff=bwList_shuff)
