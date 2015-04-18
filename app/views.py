@@ -1,6 +1,7 @@
 from flask import render_template, request
 from app import app
 from .forms import BuzzwordForm, DelButtonForm
+from random import shuffle
 
 bwList = []
 delButtonList = []
@@ -26,6 +27,17 @@ def newBingo():
 							delButtonList = delButtonList)
 
 
-@app.route('/game', methods=['GET'])
-def game():
-	return "Game is coming soon!"
+@app.route('/table', methods=['GET'])
+def table():
+
+	### DEBUG CASE
+	#bwList = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y"]
+	###
+	bwList_shuff = bwList[:]
+	shuffle(bwList_shuff)
+
+	bwList_shuff.insert(12, "FREE")
+	print(bwList_shuff)
+
+	return render_template('table.html',
+							bwList_shuff=bwList_shuff)

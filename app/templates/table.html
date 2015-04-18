@@ -1,0 +1,22 @@
+<!-- extend from base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+EARLY ALPHA STUFF!!<br><br>
+
+	<div>
+
+	<table border="1" style="table-layout:fixed" cellpadding="3" cellspacing="3">
+		{% for i in range(5) %}
+		<tr>
+			{% for j in range(5) %}
+			<td style="width:20%"> {{bwList_shuff.pop(0)}} </td>
+			{% endfor %}
+		</tr>
+		{% endfor %}
+	</table>
+
+	</div>
+
+<br>reload to reshuffle
+{% endblock %}
