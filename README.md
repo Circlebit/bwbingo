@@ -11,4 +11,5 @@ trying to write a buzzword bingo webapp with flask.
  * ~~make a bingo table from the bwList~~
  * interactive bingo table for playing in the browser
  * nice printing for playing on paper
+ * Some CSS and possibly jQuery for eye candy
  * 
