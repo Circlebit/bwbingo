@@ -17,13 +17,13 @@
 		{% for buzzword in bwList %}
 			<li>{{ buzzword }}
 			<!-- delete button -->
-			<form action="" method="post" name="DelButtonForm" style="display:inline;"> 
+			<form action="" method="post" name="DelButtonForm" style="display:inline;">
 				{{ delButtonList[-1].delId( value=bwList.index(buzzword) ) }}
 				{{ delButtonList[-1].delButton() }}
 			</form>
-			</li> 
+			</li>
 		{% endfor %}
-		
+
 	{% endif %}
 			<!-- Input StringField -->
 			<li><form action="" method="post" name="BuzzwordForm">
@@ -31,7 +31,8 @@
 			</form></li>
 		</ol>
 
-		<a href="/table">Generate Bingo Table!</a>
+		<a href="{{tablelink}}">Generate Bingo Table!</a>
+
 
 	</div>
 
