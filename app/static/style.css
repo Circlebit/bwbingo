@@ -30,6 +30,10 @@ input {
   padding: 3px
 }
 
+strong {
+  color: #d33682;
+}
+
 #wrap {
   width: 650px;
   background-color: #073642;
