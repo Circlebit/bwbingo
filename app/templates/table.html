@@ -2,15 +2,14 @@
 {% extends "base.html" %}
 
 {% block content %}
-EARLY ALPHA STUFF!!<br><br>
 
 	<div>
 
-	<table border="1" style="table-layout:fixed" cellpadding="3" cellspacing="3">
+	<table>
 		{% for i in range(5) %}
 		<tr>
 			{% for j in range(5) %}
-			<td style="width:120px; height:120px" align="center">
+			<td class="bwcell">
 				{{bwList_shuff.pop(0)}}
 			</td>
 			{% endfor %}
@@ -20,7 +19,7 @@ EARLY ALPHA STUFF!!<br><br>
 
 	</div>
 
-	<p><a href="{{permalink}}">Permalink</a> (link to this exact card)</p>
-	<p><a href="{{reshuffle}}">Reshuffle</a> (link to a reshuffled card. you can send this to other players)</p>
+	<p><a href="{{permalink}}">Permalink</a><br>link to this exact card</p>
+	<p><a href="{{reshuffle}}">Reshuffle</a><br>link to reshuffled card (send this to other players)</p>
 
 {% endblock %}

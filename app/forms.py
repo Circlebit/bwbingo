@@ -7,4 +7,8 @@ class BuzzwordForm(Form):
 
 class DelButtonForm(Form):
 	delId = HiddenField()
-	delButton = SubmitField('-')
+	delButton = SubmitField(' - ')
+
+# impelement titleform here
+#class TitleForm(Form):
+#	Title = StringField('Title')

@@ -41,7 +41,7 @@ def table():
 		bwList = bwUrl.split("|")
 
 	### DEBUG CASES
-	#bwList = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y"]
+	# bwList = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y"]
 	# table?bw=jahvistic|jamnagar|jerseyed|loneness|nonidiomatical|nonplutocratic|beak|changefully|though|unfainting|polytheist|decolorizing|disillusionist|dialogite|scapegoatism|romanticise|scorpion|shopwalker|substitutively|snotty|speediness|stephanotis|stereotyping|sunwise|infancy|hoover|hypnagogic
 
 	bwList_shuff = bwList[:]

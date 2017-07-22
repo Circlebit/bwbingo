@@ -2,7 +2,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-	<div>
+	<div id="index-content">
 		<p>This is an implementation of a Buzzword Bingo Webapp. All written in Python using Flask.</p>
 
 	{% if bwList.__len__() == 0 %}
@@ -31,7 +31,9 @@
 			</form></li>
 		</ol>
 
+	{% if bwList.__len__() >= 24 %}
 		<a href="{{tablelink}}">Generate Bingo Table!</a>
+	{% endif %}
 
 
 	</div>
